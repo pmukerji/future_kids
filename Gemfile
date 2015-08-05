@@ -42,8 +42,9 @@ group :development, :test do
   gem 'factory_girl'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  gem 'rack-mini-profiler'
 end
+
+gem 'rack-mini-profiler', group: :development
 
 gem 'codeclimate-test-reporter', group: :test, require: nil
 
