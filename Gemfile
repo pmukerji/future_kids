@@ -43,6 +43,7 @@ group :development, :test do
   # use specific selenium version, see https://github.com/panterch/future_kids/issues/117
   gem 'selenium-webdriver', '2.47.1'
   gem 'database_cleaner'
+  gem 'poltergeist'
 end
 
 gem 'codeclimate-test-reporter', group: :test, require: nil
