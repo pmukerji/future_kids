@@ -356,7 +356,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   sdoc
-  selenium-webdriver (= 2.47.1)
+  selenium-webdriver
   show_for
   simple_form
   sprockets-coffee-react
