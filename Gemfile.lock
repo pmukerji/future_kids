@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/plataformatec/show_for.git
-  revision: 30dd1dd72be5242d7ae6221ffb7dcf4a7706f90a
-  specs:
-    show_for (0.4.0)
-      actionpack (>= 3.2, < 5.1)
-      activemodel (>= 3.2, < 5.1)
-
-GIT
   remote: git://github.com/svenfuchs/i18n-active_record.git
   revision: b26c2e62e32df2f3b9ae42083647725b7ecfdff0
   specs:
@@ -280,6 +272,9 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sexp_processor (4.6.0)
+    show_for (0.4.0)
+      actionpack (>= 3.2, < 5)
+      activemodel (>= 3.2, < 5)
     simple_form (3.2.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -362,8 +357,11 @@ DEPENDENCIES
   sass-rails
   sdoc
   selenium-webdriver (= 2.47.1)
-  show_for!
+  show_for
   simple_form
   sprockets-coffee-react
   uglifier
   whenever
+
+BUNDLED WITH
+   1.10.6

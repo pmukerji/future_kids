@@ -14,7 +14,7 @@ gem 'simple_form'
 gem 'paperclip'
 gem 'pg'
 gem 'responders'
-gem 'show_for', github: 'plataformatec/show_for'
+gem 'show_for'
 gem 'whenever', require: false
 gem 'bootstrap-sass'
 gem 'quiet_assets'
