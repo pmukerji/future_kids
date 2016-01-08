@@ -40,16 +40,11 @@ class KidsController < ApplicationController
   # - react component on show_kid_mentors_schedules
   # - react component on show_kid_mentors_schedules in substitution workflow
   def update
-
-    unless @kid.update(kid_params)
-      # validation failed
-      return render :edit
-    end
+    # validation failed
+    return render :edit unless @kid.update(kid_params)
 
     # normal call - not through substitution workflow
-    unless @substitution
-      return respond_with(@kid)
-    end
+    return respond_with(@kid) unless @substitution
 
     # call included substitution_id: sync substitution information
     @substitution.update!(secondary_mentor: @kid.secondary_mentor)
