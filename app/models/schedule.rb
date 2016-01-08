@@ -1,12 +1,18 @@
 class Schedule < ActiveRecord::Base
   belongs_to :person, polymorphic: true
 
-  validates_numericality_of :day, only_integer: true,
-                                  greater_than_or_equal_to: 1, less_than_or_equal_to: 5
-  validates_numericality_of :hour, only_integer: true,
-                                   greater_than_or_equal_to: 0, less_than_or_equal_to: 23
-  validates_numericality_of :minute, only_integer: true,
-                                     greater_than_or_equal_to: 0, less_than_or_equal_to: 59
+  validates_numericality_of :day,
+    only_integer: true,
+    greater_than_or_equal_to: 1,
+    less_than_or_equal_to: 5
+  validates_numericality_of :hour,
+    only_integer: true,
+    greater_than_or_equal_to: 0,
+    less_than_or_equal_to: 23
+  validates_numericality_of :minute,
+    only_integer: true,
+    greater_than_or_equal_to: 0,
+    less_than_or_equal_to: 59
 
   validates_uniqueness_of :person_id, scope: [:person_type, :day, :hour, :minute]
 
