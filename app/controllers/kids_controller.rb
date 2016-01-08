@@ -151,7 +151,7 @@ class KidsController < ApplicationController
     schedules_by_day = schedules_array.group_by { |s| s.day }
     schedules_by_day.each do |day, times|
       times.each do |time|
-        key = time.hour.to_s.rjust(2, '0')+':'+time.minute.to_s.rjust(2, '0')
+        key = '%02d' % time.hour + ':' + '%02d' % time.minute
         schedules_set[day][key] = true
       end
     end
